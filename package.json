@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.1",
     "@mui/material": "^5.15.1",
+    "@mui/x-charts": "^6.18.4",
     "@mui/x-date-pickers-pro": "^6.18.5",
     "dayjs": "^1.11.10",
     "formik": "^2.4.5",
