@@ -20,7 +20,7 @@ const Situation = () => {
 
     return ( 
         <>
-          <div className="w-full py-3 rounded-lg from-[15%] to-[85%] flex bg-gradient-to-r mt-3 from-[#99F2C8] to-[#1F4037] ">
+          <div className="w-full py-3 rounded-lg from-[15%] to-[85%] flex bg-gradient-to-r from-[#99F2C8] to-[#1F4037] ">
                   <div className="w-2/12 flex border-e-[1px] border-dashed border-[#424242] items-center justify-center flex-col">
                     <Image
                     src={cludeSunImggreen}

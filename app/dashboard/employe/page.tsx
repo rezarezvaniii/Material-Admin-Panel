@@ -5,7 +5,8 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import Situation from "@/components/dashboard/employe/Situation";
 import Tabledata from "@/components/dashboard/employe/Tabledate";
-import { XAxis, YAxis, CartesianGrid, Tooltip, Area, AreaChart } from "recharts"
+import EmployPieChart from "@/components/dashboard/employe/EmployPieChart";
+import EmployeBarCharts from "@/components/dashboard/employe/EmployBarCharts";
 const Heaven= () => {
 
   const data = [
@@ -60,7 +61,7 @@ const Heaven= () => {
         <Header />
 
 
-        <div className="w-full bg-[#F5F5F5] pb-6 px-3 flex flex-col gap-3">
+        <div className="w-full bg-[#F5F5F5] pb-6 px-3 flex pt-3 flex-col gap-3">
 
               <div className="flex gap-3">
 
@@ -77,7 +78,7 @@ const Heaven= () => {
 
               </div>  
 
-              <div className="w-[25%] pt-3 ">
+              <div className="w-[25%] bg-white flex items-center rounded-md">
 
               <LocalizationProvider  dateAdapter={AdapterDayjs}>
                 <DateCalendar className="w-full " sx={{backgroundColor:"white" , borderRadius:"5px" }}/>
@@ -87,12 +88,14 @@ const Heaven= () => {
 
               </div>
 
-                <div className="w-full bg-white flex rounded-lg">
-                  <div className="w-4/12 ">
+                <div className="w-full flex gap-3 rounded-lg">
+                  <div className="w-4/12 flex items-center justify-center bg-white rounded-md ">
+
+                    <EmployPieChart/>
                   
                   </div>
-                  <div className="w-8/12 ">
-                 
+                  <div className="w-8/12 bg-white flex items-center rounded-md ">
+                    <EmployeBarCharts />
                   </div>
 
                 </div>

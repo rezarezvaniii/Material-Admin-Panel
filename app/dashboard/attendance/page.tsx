@@ -34,7 +34,7 @@ const Attendance = () => {
             </div>
 
 
-            <div className="flex w-full gap-3 mt-3  bg-red-500">
+            <div className="flex w-full gap-3 mt-3 ">
               <div className="w-[31%] ">
                 <Transaction />
               </div>
@@ -50,10 +50,6 @@ const Attendance = () => {
               </div>
 
             </div>
-
-
-
-
         </div>
         
         </>

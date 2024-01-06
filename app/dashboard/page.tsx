@@ -68,7 +68,7 @@ const Dashboard = () => {
 
             <div className="w-full bg-[#F5F5F5] pb-6 px-3 flex flex-col gap-3">
 
-              <div className="flex gap-3">
+              <div className="flex gap-3 pt-3">
 
               <div className="w-[75%] flex flex-col gap-3">
                 
@@ -81,10 +81,10 @@ const Dashboard = () => {
 
               </div>  
 
-              <div className="w-[25%] pt-3 ">
+              <div className="w-[25%] pt-3 bg-white rounded-md flex items-center">
 
               <LocalizationProvider  dateAdapter={AdapterDayjs}>
-                <DateCalendar className="w-full " sx={{backgroundColor:"white" , borderRadius:"5px" }}/>
+                <DateCalendar className="w-full " sx={{backgroundColor:"white" , height:"100%" , borderRadius:"5px" }}/>
               </LocalizationProvider>
 
               </div>

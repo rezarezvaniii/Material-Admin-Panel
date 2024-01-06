@@ -21,7 +21,7 @@ const HomeComponent = () => {
 
     return ( 
         <>
-          <div className="w-full py-4 rounded-md from-[20%] to-[80%] flex bg-gradient-to-r mt-3 from-[#FFD370] to-[#E16F7C] ">
+          <div className="w-full py-4 rounded-md from-[20%] to-[80%] flex bg-gradient-to-r from-[#FFD370] to-[#E16F7C] ">
                   <div className="w-2/12 flex border-e-[1px] border-dashed border-[#424242] items-center justify-center flex-col">
                     <Image
                     src={cludeSunImg}

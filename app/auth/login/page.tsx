@@ -14,7 +14,6 @@ import Snackbar from '@mui/material/Snackbar';
 import Slide, { SlideProps } from '@mui/material/Slide';
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/joy/CircularProgress';
-import { useEffect } from "react";
 
 type TransitionProps = Omit<SlideProps, 'direction'>;
 
