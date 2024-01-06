@@ -26,7 +26,7 @@ export default function DashboardLayout({
         </div>  
 
 
-        <div className={`${myBoolean ? "w-[80%]" : "w-[95%]"} transition-all duration-300  h-screen overflow-y-auto `}>
+        <div className={`${myBoolean ? "w-[80%]" : "w-[95%]"} bg-[#F5F5F5] transition-all duration-300  h-screen overflow-y-auto `}>
 
         {children}
         </div>
