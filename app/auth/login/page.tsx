@@ -126,7 +126,7 @@ const SignIn = () => {
         <>
             <div className="w-full h-screen flex justify-center items-center">
             
-              <div className="w-3/12 flex flex-col items-center ">
+              <div className="w-[350px] flex flex-col items-center ">
               <Image
                 src={logoImgLogin}
                 
@@ -216,11 +216,8 @@ const SignIn = () => {
                 </button>
                 <span className="w-full flex justify-center items-center">
 
-                <button onClick={ handleClickError(TransitionRight) } className="text-center mt-4 text-[#FF698D]">Create an account</button>
+                <button onClick={ handleClick(TransitionRight)} className="text-center mt-4 text-[#FF698D]">Create an account</button>
                 </span>
-
-              <button onClick={ handleClicksuccess(TransitionRight)}>fjsdklfjsio</button>
-
               </div>
 
  

@@ -23,8 +23,6 @@ const Leave = () => {
 
     return ( 
         <>
-          <Header/>
-          
 
           <div className="w-full px-4 mt-6 ">
 
@@ -36,9 +34,10 @@ const Leave = () => {
             <button className="font-bold text-base text-[#525256]">Expenses</button>
           </div>
 
-          <div className="w-full rounded-lg pb-4 mt-6 shadow-[0_35px_60px_-15px_rgba(76,103,100,0.1)]">
+          <div className="w-full rounded-lg  pb-4 mt-6 shadow-[0_35px_60px_-15px_rgba(76,103,100,0.1)]">
+          <div className="w-full overflow-x-auto">
 
-          <table className="w-full ">
+          <table className="w-full max-[1050px]:w-[700px]  ">
             <tbody>
               <tr className=" h-10 w-full font-bold text-[#191919] text-sm">
                 <th className=" text-start ps-4 ">Items</th>
@@ -67,11 +66,13 @@ const Leave = () => {
               ))}
               </tbody>
             </table>
+              </div>
 
                 <div className="w-full flex justify-center mt-2">
                 <button className="text-white text-sm items-center rounded-md justify-center px-6 py-2  font-medium bg-[#FF698D] flex p-2 ">
                 Load More  
               </button>
+              
                 </div>
 
           </div>

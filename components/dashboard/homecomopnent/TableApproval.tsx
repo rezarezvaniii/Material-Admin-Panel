@@ -16,8 +16,8 @@ const TableApproval = () => {
         <>
           <h1 className="font-bold text-base text-[#424242] ms-4">Approval</h1>
 
-            <table className="w-full ">
-            <tbody>
+            <table className="w-full max-[600px]:w-[580px] ">
+            <tbody >
               <tr className=" h-10 w-full font-bold text-[#757575] text-sm">
                 <th className=" text-start ps-4">Date of Application</th>
                 <th className=" text-start">Application type</th>

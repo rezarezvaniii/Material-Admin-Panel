@@ -7,11 +7,11 @@ const Breakdown = () => {
 
 
   const data = [
-    {name:"Housing" , price:80.00 , persont:"15"},
+    {name:"Housing" , price:320.00 , persont:"15"},
     {name:"subscriptions" , price:420.00 , persont:"2"},
     {name:"lunch" , price:250.00 , persont:"25"},
     {name:"electricity" , price:260.00 , persont:"20"},
-    {name:"salaries" , price:50.00 , persont:"15"},
+    {name:"salaries" , price:500.00 , persont:"15"},
     {name:"trips" , price:160.00 , persont:"10"},
     
   ]
@@ -19,7 +19,7 @@ const Breakdown = () => {
         <>
           <p className="text-xl font-normal text-[#878787]">Expenses Breakdown</p>
           
-          <div className="w-full h-full rounded-md mt-2 gap-4 justify-between flex flex-wrap bg-white px-4 py-6  shadow-[0_35px_60px_-15px_rgba(76,103,100,0.12)]">
+          <div className="w-full h-full rounded-md mt-2  max-[620px]:w-[600px] gap-4 justify-between flex flex-wrap bg-white px-4 py-6  shadow-[0_35px_60px_-15px_rgba(76,103,100,0.12)]">
 
           {data.map((item , index)=>(
             <div className="flex  gap-3 items-center w-[30%]">
@@ -27,8 +27,9 @@ const Breakdown = () => {
             {/* {item.logo && <item.logo />} */}
             <GarageOutlinedIcon sx={{color:"#878787"}}/>
             </div>
+
             <div className="flex w-full ">
-              <div className="flex w-full items-center">
+              <div className="flex w-full items-center justify-evenly">
                 <div className="flex flex-col">
                 <p className="font-medium text-xs text-[#878787]">{item.name}</p>
                 <p className="text-base font-bold text-[#191919]">${item.price}</p>
@@ -38,7 +39,7 @@ const Breakdown = () => {
 
                 <ArrowForwardIcon sx={{color:"#9F9F9F"}}/>
                 </button>
-                
+
               </div>
 
             </div>

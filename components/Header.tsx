@@ -2,17 +2,27 @@ import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import MicNoneIcon from '@mui/icons-material/MicNone';
 import Image from 'next/image';
-import profileImage from "../public/picture/photo_2023-12-19_10-18-08-56.jpg"
+import profileImage from "../public/picture/photo_2024-01-06_19-42-00.jpg"
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+
+
+const Header = (props:any) => {
 
 
 
-const Header = () => {
+  const { toggleDrawer } = props;
+
+  
+
+
     return ( 
         <>
           
-          <div className="w-full h-12 bg-[#EEEEEE] gap-4 flex justify-end items-center ">
-              <div className="w-[290px] relative h-10">
+          <div className="w-full h-12 bg-[#EEEEEE] gap-4 flex max-[750px]:justify-between justify-end items-center ">
+
+            <button onClick={toggleDrawer(true)} className='min-[750px]:hidden ms-3'> <FormatListBulletedIcon/> </button>
+              <div className="w-[290px] max-[600px]:hidden relative h-10">
               <input placeholder="search..." type="search" className="w-full h-full outline-none -z-30 ps-8 rounded-full " />
                 <button>
                   <SearchIcon className='absolute z-30 start-2 top-2' color='action'/>
@@ -21,7 +31,8 @@ const Header = () => {
                   <MicNoneIcon className='absolute z-30 end-2 top-2 ' color='primary'/>
                   </button>
               </div>
-              <NotificationsNoneIcon/>
+
+              <NotificationsNoneIcon className='max-[600px]:hidden'/>
 
               <div className='flex '>
                 <div className='flex '>
@@ -42,7 +53,7 @@ const Header = () => {
                   />
                   
                 </div>
-                <div className='w-6 h-full'>
+                <div className='w-6 h-full '>
                   <ArrowDropDownIcon/>
                 </div>
               </div>

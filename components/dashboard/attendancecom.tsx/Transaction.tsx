@@ -26,7 +26,7 @@ const data = [
     return ( 
         <>
           <p className="text-xl font-normal text-[#878787]">Recent Transaction</p>
-              <div className="w-full h-full rounded-md mt-2 gap-10 flex flex-col  shadow-[0_35px_60px_-15px_rgba(76,103,100,0.12)] bg-white px-4 pt-6">
+              <div className="w-full h-full rounded-md mt-2 gap-7 flex flex-col  shadow-[0_35px_60px_-15px_rgba(76,103,100,0.12)] bg-white px-4 pt-6">
                   <div className="w-full flex gap-4">
                     <button className="text-base font-bold border-b-2 border-[#299D91] text-[#299D91]">All</button>
                     <button className="text-base font-bold text-[#525256]">Revenue</button>
@@ -52,7 +52,6 @@ const data = [
                             <p className="text-xs font-normal text-[#9F9F9F]">{item.date}</p>
                             </div>
                           </div>
-
                         </div>
                       </div>
                     ))

@@ -4,6 +4,8 @@
 
 body{
     /* direction: rtl; */
+    max-width: 1950px;
+    margin: 0 auto;
 }
 
 *{
@@ -12,3 +14,18 @@ body{
 /* .swiper-pagination-bullets{
     bottom: -30px !important;
 } */
+
+
+.bodyscroller::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .bodyscroller::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+  }
+  
+  .bodyscroller::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa;
+    border-radius: 100px;
+  }

@@ -53,24 +53,23 @@ const Heaven= () => {
       "amt": 2100
     }
   ]
-  
+
 
   
     return ( 
         <>
-        <Header />
 
 
         <div className="w-full bg-[#F5F5F5] pb-6 px-3 flex pt-3 flex-col gap-3">
 
-              <div className="flex gap-3">
+              <div className="flex gap-3 max-[1150px]:flex-col  ">
 
-              <div className="w-[75%] flex flex-col gap-3">
+              <div className="w-[75%] max-[1150px]:w-full flex flex-col gap-3">
                 
                 <Situation />
 
 
-                <div className="w-full bg-white  rounded-lg pb-3">
+                <div className="w-full bg-white max-[600px]:overflow-x-auto rounded-lg pb-3">
 
                   <Tabledata/>
                   
@@ -78,7 +77,7 @@ const Heaven= () => {
 
               </div>  
 
-              <div className="w-[25%] bg-white flex items-center rounded-md">
+              <div className="w-[25%] max-[1150px]:w-full bg-white flex items-center rounded-md">
 
               <LocalizationProvider  dateAdapter={AdapterDayjs}>
                 <DateCalendar className="w-full " sx={{backgroundColor:"white" , borderRadius:"5px" }}/>
@@ -88,13 +87,13 @@ const Heaven= () => {
 
               </div>
 
-                <div className="w-full flex gap-3 rounded-lg">
-                  <div className="w-4/12 flex items-center justify-center bg-white rounded-md ">
+                <div className="w-full max-[1150px]:flex-col flex gap-3 rounded-lg">
+                  <div className="w-4/12 max-[1150px]:w-full flex items-center justify-center bg-white rounded-md ">
 
                     <EmployPieChart/>
                   
                   </div>
-                  <div className="w-8/12 bg-white flex items-center rounded-md ">
+                  <div className="w-8/12 max-[1150px]:w-full bg-white flex items-center rounded-md ">
                     <EmployeBarCharts />
                   </div>
 
