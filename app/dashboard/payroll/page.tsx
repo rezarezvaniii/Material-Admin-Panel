@@ -124,7 +124,7 @@ const Payroll = () => {
           <div className="mt-4 w-full flex flex-wrap gap-6 ">
             {
               data.map((item , index) =>(
-                <div className="w-[31.5%] max-[1150px]:w-[47%] max-[650px]:w-full mt-6 bg-white rounded-lg flex flex-col p-5 relative shadow-[0_35px_60px_-15px_rgba(76,103,100,0.1)]">
+                <div key={index} className="w-[31.5%] max-[1150px]:w-[47%] max-[650px]:w-full mt-6 bg-white rounded-lg flex flex-col p-5 relative shadow-[0_35px_60px_-15px_rgba(76,103,100,0.1)]">
                 <Tooltip placement="bottom-start" title="Delete">
                   <IconButton onClick={() => handleClickOpenDelete(index)} className="text-[#FF698D] absolute end-4 bottom-4">
                     <DeleteIcon />

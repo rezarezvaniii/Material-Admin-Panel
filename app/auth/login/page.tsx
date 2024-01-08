@@ -31,10 +31,10 @@ const schema = Yup.object().shape({
 
 const SignIn = () => {
 
-  const [success , setSuccess] = useState(false);
-  const [passerror , setPasserror] = useState(false);
+  const [errmassage, setErrmassage] = useState(false);
+  const [successmsg, setSuccessmsg] = useState(false);
   const [loading , setLoading] = useState(false)
-  console.log(passerror);
+
 
 
 
@@ -53,23 +53,23 @@ const SignIn = () => {
   };
 
 
-  const handleClicksuccess = (Transition: React.ComponentType<TransitionProps>) => () => {
-    setTransition(() => Transition);
-    setSuccess(true);
-  };
+  // const handleClicksuccess = (Transition: React.ComponentType<TransitionProps>) => () => {
+  //   setTransition(() => Transition);
+  //   setSuccess(true);
+  // };
 
-  const handleSuccessCloses = () => {
-    setSuccess(false);
-  };
+  // const handleSuccessCloses = () => {
+  //   setSuccess(false);
+  // };
 
-  const handleClickError = (Transition: React.ComponentType<TransitionProps>) => () => {
-    setTransition(() => Transition);
-    setPasserror(true);
-  };
+  // const handleClickError = (Transition: React.ComponentType<TransitionProps>) => () => {
+  //   setTransition(() => Transition);
+  //   setPasserror(true);
+  // };
 
-  const handleErrorCloses = () => {
-    setPasserror(false);
-  };
+  // const handleErrorCloses = () => {
+  //   setPasserror(false);
+  // };
 
 
 
@@ -92,22 +92,23 @@ const SignIn = () => {
       setLoading(true)
 
       setTimeout(() => {
-        console.log(loading)
         if(password == "12345678" && email == "reza@gmail.com"){
           localStorage.setItem('token', "thisistoken");
-          
+          setSuccessmsg(true)
           setLoading(false)
-          setSuccess(true)
           setTimeout(() => {
+            setSuccessmsg(false)
             router.push('/dashboard');
           }, 2000);
           
+
           
         }else{
-          handleClickError(TransitionRight)
-          console.log(loading)
           setLoading(false)
-          setPasserror(true)
+          setErrmassage(true)
+          setTimeout(() => {
+            setErrmassage(false)
+          }, 2000);
         }
         
       }, 2000);
@@ -244,7 +245,21 @@ const SignIn = () => {
                       }}
                     />
 
-                    <Snackbar
+            {
+                errmassage ?
+                    <div className='animate-wiggle absolute bg-red-500 text-white px-6 py-2 rounded-lg transition-all w-fit start-5 top-2 z-50 flex gap-2 font-medium' > <p className="font-semibold border-e-[1px] px-2 border-white">Login</p> login was faild </div>
+                    :
+                    null
+            }
+            {successmsg ?
+               
+                <div className='animate-wiggle absolute bg-green-500 text-white px-6 py-2 rounded-lg transition-all w-fit start-5 top-2 z-50 flex gap-2 font-medium' > <p className="font-semibold border-e-[1px] px-2 border-white">Login</p> login was success </div>
+                :
+                null
+            }
+
+
+                    {/* <Snackbar
                       open={success}
                       onClose={handleSuccessCloses}
                       TransitionComponent={transition}
@@ -280,7 +295,7 @@ const SignIn = () => {
                           background: "red"
                         }
                       }}
-                    />
+                    /> */}
 
 
         </>

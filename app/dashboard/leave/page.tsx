@@ -37,7 +37,7 @@ const Leave = () => {
           <div className="w-full rounded-lg  pb-4 mt-6 shadow-[0_35px_60px_-15px_rgba(76,103,100,0.1)]">
           <div className="w-full overflow-x-auto">
 
-          <table className="w-full max-[1050px]:w-[700px]  ">
+          <table className="w-full max-[1050px]:w-[900px]  ">
             <tbody>
               <tr className=" h-10 w-full font-bold text-[#191919] text-sm">
                 <th className=" text-start ps-4 ">Items</th>

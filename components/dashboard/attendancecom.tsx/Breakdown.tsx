@@ -22,7 +22,7 @@ const Breakdown = () => {
           <div className="w-full h-full rounded-md mt-2  max-[620px]:w-[600px] gap-4 justify-between flex flex-wrap bg-white px-4 py-6  shadow-[0_35px_60px_-15px_rgba(76,103,100,0.12)]">
 
           {data.map((item , index)=>(
-            <div className="flex  gap-3 items-center w-[30%]">
+            <div key={index} className="flex  gap-3 items-center w-[30%]">
             <div className="h-fit rounded-lg flex flex-col gap-[2px] w-fit bg-[#D2D2D240] p-2 ">
             {/* {item.logo && <item.logo />} */}
             <GarageOutlinedIcon sx={{color:"#878787"}}/>
