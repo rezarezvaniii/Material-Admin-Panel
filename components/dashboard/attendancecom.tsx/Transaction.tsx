@@ -1,13 +1,17 @@
+"use client"
 import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined';
 import FoundationOutlinedIcon from '@mui/icons-material/FoundationOutlined';
 import CameraOutdoorOutlinedIcon from '@mui/icons-material/CameraOutdoorOutlined';
 import MovieFilterOutlinedIcon from '@mui/icons-material/MovieFilterOutlined';
 import GarageOutlinedIcon from '@mui/icons-material/GarageOutlined';
+import { useState } from 'react';
 
 
 
 
 const Transaction = () => {
+
+const [pagetab , setPagetab] = useState(1)
 
 
 
@@ -28,9 +32,9 @@ const data = [
           <p className="text-xl font-normal text-[#878787]">Recent Transaction</p>
               <div className="w-full h-full rounded-md mt-2 gap-7 flex flex-col  shadow-[0_35px_60px_-15px_rgba(76,103,100,0.12)] bg-white px-4 pt-6">
                   <div className="w-full flex gap-4">
-                    <button className="text-base font-bold border-b-2 border-[#299D91] text-[#299D91]">All</button>
-                    <button className="text-base font-bold text-[#525256]">Revenue</button>
-                    <button className="text-base font-bold text-[#525256]">Expenses</button>
+                    <button onClick={()=>setPagetab(1)} className={`text-base font-bold  ${pagetab==1 ? "border-b-2 border-[#299D91] text-[#299D91]" : "text-[#525256]"}`}>All</button>
+                    <button onClick={()=>setPagetab(2)} className={`text-base font-bold  ${pagetab==2 ? "border-b-2 border-[#299D91] text-[#299D91]" : "text-[#525256]"}`}>Revenue</button>
+                    <button onClick={()=>setPagetab(3)} className={`text-base font-bold  ${pagetab==3 ? "border-b-2 border-[#299D91] text-[#299D91]" : "text-[#525256]"}`}>Expenses</button>
                   </div>
 
                   <div className="flex  flex-col w-full ">

@@ -39,8 +39,8 @@ const Payroll = () => {
 
     const [successdelete , setSuccessdelete] = useState(false);
     const [errordelete , setErrordelete] = useState(false);
-
-
+    const [successcreate , setSuccesscreate]  = useState(false)
+    const [canselcreate , setCanselcreate] = useState(false)
 
   const handleSuccessCloses = () => {
     setSuccessdelete(false);
@@ -74,10 +74,15 @@ const Payroll = () => {
 
     setData(prevData => [...prevData, newProject]);
     setOpen(false);
+    setSuccesscreate(true)
+    setTimeout(() => {
+      setSuccesscreate(false)
+    }, 2000);
   } else {
     setRequiredform(true)
+
   }
-     
+
     };
 
   const [open, setOpen] = React.useState(false);
@@ -89,8 +94,17 @@ const Payroll = () => {
 
   const handleClose = () => {
     setOpen(false);
-    
+
   };
+
+  const handleCanselingCreate = ()=>{
+    setOpen(false);
+    setCanselcreate(true)
+    setTimeout(() => {
+      setCanselcreate(false)
+      
+    }, 2000);
+  }
 
   const [deletepost, setDeletepost] = React.useState(false);
 
@@ -100,7 +114,7 @@ const Payroll = () => {
     setDeletepost(true);
     setDeleteIndex(index);
   };
-  
+
   const handleCloseDelete = () => {
     setDeletepost(false);
   };
@@ -126,15 +140,13 @@ const Payroll = () => {
               data.map((item , index) =>(
                 <div key={index} className="w-[31.5%] max-[1150px]:w-[47%] max-[650px]:w-full mt-6 bg-white rounded-lg flex flex-col p-5 relative shadow-[0_35px_60px_-15px_rgba(76,103,100,0.1)]">
                 <Tooltip placement="bottom-start" title="Delete">
-                  <IconButton onClick={() => handleClickOpenDelete(index)} className="text-[#FF698D] absolute end-4 bottom-4">
+                  <button onClick={() => handleClickOpenDelete(index)} className="text-[#FF698D] rounded-full transition-all duration-300 hover:bg-[#777777]/[0.2] p-[4px] flex items-center justify-center absolute end-4 bottom-4">
                     <DeleteIcon />
-                  </IconButton>
+                  </button>
                 </Tooltip>
                 
               <p className="text-[#878787] font-bold text-base text-center">{item.name}</p>
-
               <p className="font-semibold mt-4 text-xl text-[#191919] ">{item.project}</p>
-
               <p className="font-normal text-[#9F9F9F] text-sm ">type</p>
               <p className="font-semibold text-xl text-[#191919] mt-4">${item.price.toLocaleString()}</p>
               <p className="font-normal text-[#9F9F9F] text-sm ">Total amount</p>
@@ -142,9 +154,7 @@ const Payroll = () => {
               <button className="text-white text-sm items-center rounded-lg justify-center px-4 py-2 font-medium bg-[#FF698D] flex p-2 ">
                 Details
                 <KeyboardArrowRightIcon/>
-                
               </button>
-
               </div>
             </div>
               ))
@@ -169,6 +179,17 @@ const Payroll = () => {
         </div>
 
 
+
+            {
+              successcreate ? 
+              <div className='animate-wiggle absolute bg-green-400 text-white px-6 max-[400px]:start-2 py-2 rounded-lg transition-all w-fit start-1/4 top-1 z-50 flex gap-2 font-medium' > <p className="font-semibold border-e-[1px] px-2 border-white">Post</p> create post was success </div>
+              : null
+            }
+            {
+              canselcreate ? 
+              <div className='animate-wiggle absolute bg-gray-500 text-white px-6 max-[400px]:start-2 py-2 rounded-lg transition-all w-fit start-1/4 top-1 z-50 flex gap-2 font-medium' > <p className="font-semibold border-e-[1px] px-2 border-white">Post</p> create post was canseling </div>
+              : null
+            }
 
 
 
@@ -217,7 +238,7 @@ const Payroll = () => {
           }
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={handleCanselingCreate}>Cancel</Button>
           <Button onClick={createProject}>create</Button>
         </DialogActions>
       </Dialog>
@@ -284,6 +305,8 @@ const Payroll = () => {
                         }
                       }}
                     />
+
+
 
           
             

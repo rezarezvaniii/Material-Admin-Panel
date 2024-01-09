@@ -127,7 +127,7 @@ const SignIn = () => {
         <>
             <div className="w-full h-screen flex justify-center items-center">
             
-              <div className="w-[350px] flex flex-col items-center ">
+              <div className="w-[350px] max-[350px]:w-full px-2 flex flex-col items-center ">
               <Image
                 src={logoImgLogin}
                 
@@ -184,7 +184,7 @@ const SignIn = () => {
                 <label htmlFor="myCheckbox" className="text-base cursor-pointer font-light text-[#191D23]">Keep me signed in</label>
                 </span>
 
-                <Button className="w-full h-12 hover:bg-[#FF698D] bg-[#FF698D] text-white rounded-lg" type="submit" onClick={(e) => {
+                <button className="w-full h-12 hover:bg-[#FF698D] flex justify-center items-center font-bold text-base bg-[#FF698D] text-white rounded-lg" type="submit" onClick={(e) => {
                   e.preventDefault();
                   handleSubmit();
                   
@@ -196,13 +196,13 @@ const SignIn = () => {
                   </Box>
                     : 
                     "Login" 
-                   
                   }
-                </Button>
+
+                </button>
                 </form>
 
                 <div className="flex justify-center w-full mt-4 relative">
-                  <span className="absolute w-9/12 -z-10 h-[1px] bg-[#999DA3] translate-y-1/2 top-1/2  "></span>
+                  <span className="absolute w-9/12 -z-10 h-[1px] bg-[#999DA3] translate-y-1/2 top-1/2 "></span>
                     <p className="text-[#999DA3] px-2 bg-white">or sign in with</p>
                   
                 </div>
@@ -210,7 +210,7 @@ const SignIn = () => {
                 <button onClick={ handleClick(TransitionRight)} className="w-full h-12 rounded-lg mt-3 flex justify-center items-center gap-2 bg-[#E4E7EB] ">
                 <Image
                 src={GoogleLogoSvg}
-                
+
                 alt="Picture of the author"
               />
                 Continue with Google

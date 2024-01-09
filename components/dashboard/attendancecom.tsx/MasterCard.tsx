@@ -51,8 +51,8 @@ import arrowtoprightlogo from "../../../public/picture/Frame 40276.png"
                         </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                          <div className="w-full flex h-[70%] justify-center items-center">
-                          <div className="bg-[#FB3F6C] p-4 flex rounded-md w-10/12 h-full ">
+                          <div className="w-full flex h-[70%] justify-center  items-center">
+                          <div className="bg-[#FB3F6C] p-4 flex rounded-md w-[300px] h-full ">
                             <div className="w-1/2 flex flex-col gap-2">
                               <p className="font-medium text-sm text-[#FFFFFFB2] ">Account type</p>
                               <p className="font-bold text-base text-[#FFFFFF] ">Debit Card</p>
@@ -70,7 +70,7 @@ import arrowtoprightlogo from "../../../public/picture/Frame 40276.png"
                         </SwiperSlide>
                         <SwiperSlide>
                           <div className="w-full flex h-[70%] justify-center items-center">
-                          <div className="bg-[#FB3F6C] p-4 flex rounded-md w-10/12 h-full ">
+                          <div className="bg-[#FB3F6C] p-4 flex rounded-md w-[300px] h-full ">
                             <div className="w-1/2 flex flex-col gap-2">
                               <p className="font-medium text-sm text-[#FFFFFFB2] ">Account type</p>
                               <p className="font-bold text-base text-[#FFFFFF] ">Debit Card</p>
