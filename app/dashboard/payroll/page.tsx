@@ -243,7 +243,7 @@ const Payroll = () => {
             Yes
           </Button>
         </DialogActions>
-      </Dialog>'
+      </Dialog>
       
       
       
